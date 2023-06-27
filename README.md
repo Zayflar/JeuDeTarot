@@ -1,5 +1,8 @@
 # JeuDeTarot
 
+##Avertissement
+L'IA par renforcement ne sera efficace qu'une fois un certain nombre de parties jouées. C'est pourquoi son implémentation se fera après celle de l'application web.
+
 ## Fonctionnalités
 
 Le jeu de tarot en ligne offrira les fonctionnalités suivantes :
