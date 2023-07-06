@@ -118,7 +118,30 @@ class Jeu:
                     return Fore.YELLOW + f" {carte[1]}"
                 case "Excuse":
                     return Fore.YELLOW + f" Excuse"
-            
+
+    
+    def gestion_chien(self, i):
+        print("Chien : ")
+        self.afficher_paquet()
+        while self.paquet != []:
+            self.mains[i].append(self.paquet.pop())
+        self.afficher_main_joueur(i)
+        couleur = input("Couleur -> ")
+        valeur = int(input("Valeur -> "))
+        carte = (couleur, valeur)
+        for _ in range (6):
+            while carte not in self.mains[i]:
+                print("\nPas dans la main", carte)
+                self.afficher_main_joueur(i)
+                couleur = input("Couleur -> ")
+                valeur = int(input("Valeur -> "))
+                carte = (couleur, valeur)
+            self.mains[i].remove(carte)
+            if (i != 6):
+                self.afficher_main_joueur(i)
+                couleur = input("Couleur -> ")
+                valeur = int(input("Valeur -> "))
+                carte = (couleur, valeur)  
 
 
     def afficher_paquet(self):
